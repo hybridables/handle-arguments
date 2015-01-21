@@ -1,3 +1,6 @@
+## v1.0.2 / January 21, 2015
+- add keywords
+
 ## v1.0.1 / January 21, 2015
 - tests titles `if` to `when`
 
