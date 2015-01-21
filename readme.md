@@ -1,6 +1,6 @@
 ## [![npm][npmjs-img]][npmjs-url] [![mit license][license-img]][license-url] [![build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![deps status][daviddm-img]][daviddm-url]
 
-> Handles given Arguments object - return separatly last argument (commonly callback) and other arguments as Array. Useful in node-style callback flow. Used in [hybridify][hybridify]
+> Handles given Arguments object - return separatly last argument (commonly callback) and other arguments as Array. Useful in node-style callback flow. Used by [hybridify][hybridify]
 
 ## Install
 ```bash
@@ -15,21 +15,21 @@ npm test
 ```js
 var handleArguments = require('handle-arguments');
 
-function testing() {
+function fixture() {
   var argz = handleArguments(arguments);
   return argz;
 }
 
-console.log(testing(1, 2, 3));
+console.log(fixture(1, 2, 3));
 //=> {callback: undefined, arguments: [1, 2, 3], args: [1, 2, 3]}
 
-console.log(testing(1, 2, function cb() {}));
+console.log(fixture(1, 2, function cb() {}));
 //=> {callback: [Function: cb], arguments: [1, 2], args: [1, 2]}
 ```
 
 #### instead of commonly used pattern
 ```js
-function testing() {
+function fixture() {
   var args = [].slice.call(arguments);
   var len = args.length
   var callback = args[len - 1];
