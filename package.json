@@ -17,7 +17,27 @@
     "type": "git",
     "url": "git://github.com/tunnckoCore/handle-arguments.git"
   },
-  "keywords": [],
+  "keywords": [
+    "api",
+    "apis",
+    "aplus",
+    "args",
+    "argument",
+    "arguments",
+    "bluebird",
+    "callback",
+    "callbacks",
+    "cb",
+    "handle",
+    "handle-callback",
+    "hybrid",
+    "hybrid-apis",
+    "hybridify",
+    "promise",
+    "promises",
+    "promises-aplus",
+    "then"
+  ],
   "license": {
     "type": "MIT",
     "url": "https://github.com/tunnckoCore/handle-arguments/blob/master/license.md"
