@@ -12,7 +12,7 @@ var handleArguments = require('./index');
 
 describe('handle-arguments', function() {
   describe('should throw error', function() {
-    it('if Object is given - handleArguments({name: 123})', function(done) {
+    it('when Object is given - handleArguments({name: 123})', function(done) {
       function fixture() {
         var argz = handleArguments({name: 123});
       }
@@ -20,7 +20,7 @@ describe('handle-arguments', function() {
       done();
     });
 
-    it('if no params is given - handleArguments()', function(done) {
+    it('when no params is given - handleArguments()', function(done) {
       function fixture() {
         var argz = handleArguments();
       }
@@ -28,7 +28,7 @@ describe('handle-arguments', function() {
       done();
     });
 
-    it('if Number is given - handleArguments(123)', function(done) {
+    it('when Number is given - handleArguments(123)', function(done) {
       function fixture() {
         var argz = handleArguments(123);
       }
@@ -36,7 +36,7 @@ describe('handle-arguments', function() {
       done();
     });
 
-    it('if Array is given - handleArguments([1,2,3])', function(done) {
+    it('when Array is given - handleArguments([1,2,3])', function(done) {
       function fixture() {
         var argz = handleArguments([1,2,3]);
       }
@@ -44,7 +44,7 @@ describe('handle-arguments', function() {
       done();
     });
 
-    it('if String is given - handleArguments(\'123\')', function(done) {
+    it('when String is given - handleArguments(\'123\')', function(done) {
       function fixture() {
         var argz = handleArguments('123');
       }
