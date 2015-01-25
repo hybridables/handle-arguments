@@ -33,6 +33,7 @@ module.exports = function handleArguments(argsObject) {
 
   return {
     callback: callback,
+    cb: callback,
     arguments: args,
     args: args
   };
