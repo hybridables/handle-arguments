@@ -21,7 +21,7 @@ module.exports = function handleArguments(argsObject) {
   if (!isArguments(argsObject)) {
     throw new TypeError('handle-arguments: expect only Arguments object');
   }
-  var callback;
+  var callback = function defaultHandleArgumentsCallback() {};
   var args = slice(argsObject);
   var len = args.length;
   var last = args[len - 1];

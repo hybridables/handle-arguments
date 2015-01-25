@@ -21,7 +21,8 @@ function fixture() {
 }
 
 console.log(fixture(1, 2, 3));
-//=> {callback: undefined, arguments: [1, 2, 3], args: [1, 2, 3]}
+//=> {callback: [Function: hargsCallback], arguments: [1, 2, 3], args: [1, 2, 3]}
+//=> [Function: defaultHandleArgumentsCallback] is empty function (noop)
 
 console.log(fixture(1, 2, function cb() {}));
 //=> {callback: [Function: cb], arguments: [1, 2], args: [1, 2]}
