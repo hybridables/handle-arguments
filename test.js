@@ -63,6 +63,7 @@ describe('handle-arguments', function() {
 
       assert.deepEqual(actual.args, [1,2,3]);
       assert.deepEqual(actual.arguments, [1,2,3]);
+      assert.deepEqual(actual.callback.name, 'defaultHandleArgumentsCallback');
       done();
     });
 
