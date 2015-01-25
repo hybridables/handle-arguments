@@ -9,6 +9,18 @@ npm test
 ```
 
 
+## Related
+- [hybridables][hybridables]
+- [hybridify][hybridify]
+- [hybridify-all][hybridify-all]
+- [handle-callback][handle-callback]
+- [handle-errors][handle-errors]
+- [callback-and-promise][callback-and-promise]
+- [thenify-all][thenify-all]
+- [thenify][thenify]
+- [thenables][thenables]
+
+
 ## Usage
 > For more use-cases see the [tests](./test.js)
 
@@ -92,4 +104,9 @@ _Powered and automated by [kdf](https://github.com/tunnckoCore), January 21, 201
 [callback-and-promise]: https://github.com/thenables/callback-and-promise
 [thenify-all]: https://github.com/thenables/thenify-all
 [thenify]: https://github.com/thenables/thenify
+[thenables]: https://github.com/thenables
+[hybridables]: https://github.com/hybridables
 [hybridify]: https://github.com/tunnckoCore/hybridify
+[hybridify-all]: https://github.com/tunnckoCore/hybridify-all
+[handle-callback]: https://github.com/tunnckoCore/handle-callback
+[handle-errors]: https://github.com/tunnckoCore/handle-errors
