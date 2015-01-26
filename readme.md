@@ -98,7 +98,7 @@ Released under the [`MIT`][license-url] license.
 
 ***
 
-_Powered and automated by [kdf](https://github.com/tunnckoCore), January 21, 2015_
+_Powered and automated by [kdf](https://github.com/tunnckoCore), January 26, 2015_
 
 
 [callback-and-promise]: https://github.com/thenables/callback-and-promise

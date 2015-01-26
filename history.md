@@ -1,3 +1,11 @@
+
+
+## v1.0.3 / January 26, 2015
+- add more related
+- add test for changed behavior
+- if no callback given, default `cb` is noop
+- add `cb` alias for `callback`
+
 ## v1.0.2 / January 21, 2015
 - add keywords
 
