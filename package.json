@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/tunnckoCore/handle-arguments.git"
+    "url": "git://github.com/hybridables/handle-arguments.git"
   },
   "keywords": [
     "api",
@@ -40,7 +40,7 @@
   ],
   "license": {
     "type": "MIT",
-    "url": "https://github.com/tunnckoCore/handle-arguments/blob/master/license.md"
+    "url": "https://github.com/hybridables/handle-arguments/blob/master/license.md"
   },
   "dependencies": {
     "array-slice": "^0.2.2",
