@@ -1,5 +1,9 @@
 
 
+## v2.0.0 / January 28, 2015
+- Release v2.0.0 / npm@v2.0.0
+- because the "maybe-breakable" change in `v1.0.3`: _"if last arguments isnt function, default `cb` is empty function named `defaultHanleArgumentsCallback`"_
+
 ## v1.0.4 / January 26, 2015 (deprecated)
 - Release v1.0.4 / npm@v1.0.4
 - update reflinks
