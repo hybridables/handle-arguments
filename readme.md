@@ -8,21 +8,26 @@ npm install handle-arguments
 npm test
 ```
 
+### Please upgrade to v2.0.x
+> In `v1.0.3` was introduced **breaking** change. Sorry for the `v1.0.4` version...
 
-## Related
-- [hybridables][hybridables]
-- [hybridify][hybridify]
-- [hybridify-all][hybridify-all]
-- [handle-callback][handle-callback]
-- [handle-errors][handle-errors]
-- [callback-and-promise][callback-and-promise]
-- [thenify-all][thenify-all]
-- [thenify][thenify]
-- [thenables][thenables]
+- if last argument isnt function, default `cb` is empty function.
+- and default fn `.toString().length` is 0 and is named `defaultHanleArgumentsCallback`
 
 
-## Usage
+## API
 > For more use-cases see the [tests](./test.js)
+
+### [handleArguments](./index.js#L40)
+
+- `<argsObject>` **{Arguments}** Arguments object  
+- `return` **{Object}** with properties `callback`, `cb` and `arguments` with `args` alias
+  + `callback` **{Function}** last argument if function, else empty function given
+  + `cb` **{Function}** alias of `callback`
+  + `arguments` **{Array}** all arguments without last
+  + `args` **{Array}** alias of `arguments`
+
+**Example:**
 
 ```js
 var handleArguments = require('handle-arguments');
@@ -57,6 +62,18 @@ function fixture() {
 ```
 > Or more real world examples [callback-and-promise][callback-and-promise], [thenify][thenify], [thenify-all][thenify-all] and a lot more...
 
+
+
+## Related
+- [hybridables][hybridables]
+- [hybridify][hybridify]
+- [hybridify-all][hybridify-all]
+- [handle-callback][handle-callback]
+- [handle-errors][handle-errors]
+- [callback-and-promise][callback-and-promise]
+- [thenify-all][thenify-all]
+- [thenify][thenify]
+- [thenables][thenables]
 
 
 ## Author
@@ -98,7 +115,7 @@ Released under the [`MIT`][license-url] license.
 
 ***
 
-_Powered and automated by [kdf](https://github.com/tunnckoCore), January 26, 2015_
+_Powered and automated by [kdf](https://github.com/tunnckoCore), January 28, 2015_
 
 
 [callback-and-promise]: https://github.com/thenables/callback-and-promise
