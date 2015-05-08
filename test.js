@@ -7,8 +7,12 @@
 
 'use strict';
 
-var assert = require('assert');
+var test = require('assertit');
 var handleArguments = require('./index');
+
+var describe = test.describe
+var assert = test.assert
+var it = test.it
 
 describe('handle-arguments', function() {
   describe('should throw error', function() {
