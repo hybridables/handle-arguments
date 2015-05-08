@@ -78,7 +78,7 @@ Released under the [`MIT`][license-url] license.
 [coveralls-url]: https://coveralls.io/r/hybridables/handle-arguments?branch=master
 [coveralls-img]: https://img.shields.io/coveralls/hybridables/handle-arguments.svg?style=flat
 
-[license-url]: https://github.com/hybridables/handle-arguments/blob/master/license.md
+[license-url]: https://github.com/hybridables/handle-arguments/blob/master/LICENSE.md
 [license-img]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat
 
 [travis-url]: https://travis-ci.org/hybridables/handle-arguments
