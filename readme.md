@@ -13,7 +13,7 @@ npm test
 ## API
 > For more use-cases see the [tests](./test.js)
 
-### [handleArguments](./index.js#L40)
+### [handleArguments](./index.js#L39)
 
 - `<argsObject>` **{Arguments}** the arguments object  
 - `return` **{Object}**

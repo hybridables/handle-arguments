@@ -19,29 +19,28 @@ var isArguments = require('is-arguments')
  * var handleArguments = require('handle-arguments')
  *
  * function fixture() {
- *   var argz = handleArguments(arguments)
- *   return argz
+ *   return handleArguments(arguments)
  * }
  *
  * console.log(fixture(1, 2, 3))
- * //=> {callback: [Function: defaultHandleArgumentsCallback],
+ * //=> {callback: undefined, cb: undefined
  * // arguments: [1, 2, 3], args: [1, 2, 3]}
- * //=> [Function: defaultHandleArgumentsCallback] is empty function (noop)
  *
- * console.log(fixture(1, 2, function cb() {}))
- * //=> {callback: [Function: cb], arguments: [1, 2], args: [1, 2]}
+ * console.log(fixture(1, 2, function _callback_ () {}))
+ * //=> {callback: [Function: _callback_], cb: [Function: _callback_],
+ * // arguments: [1, 2], args: [1, 2]}
  * ```
  *
  * @name handleArguments
- * @param  {Arguments} `<argsObject>` Arguments object
- * @return {Object} with properties `callback`, `cb` and `arguments` with `args` alias
+ * @param  {Arguments} `<argsObject>` the arguments object
+ * @return {Object}
  * @api public
  */
 module.exports = function handleArguments (argsObject) {
   if (!isArguments(argsObject)) {
     throw new TypeError('handle-arguments: expect only Arguments object')
   }
-  var callback = function defaultHandleArgumentsCallback () {}
+  var callback = null
   var args = slice(argsObject)
   var len = args.length
   var last = args[len - 1]
@@ -50,6 +49,7 @@ module.exports = function handleArguments (argsObject) {
     callback = last
     args = slice(args, 0, -1)
   }
+  callback = callback === null ? undefined : callback
 
   return {
     callback: callback,

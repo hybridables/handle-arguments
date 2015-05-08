@@ -62,7 +62,7 @@ describe('handle-arguments', function () {
 
       assert.deepEqual(actual.args, [1, 2, 3])
       assert.deepEqual(actual.arguments, [1, 2, 3])
-      assert.deepEqual(actual.callback.name, 'defaultHandleArgumentsCallback')
+      assert.strictEqual(actual.callback, undefined)
       done()
     })
     it('when have `function` (cb) as last argument', function (done) {
