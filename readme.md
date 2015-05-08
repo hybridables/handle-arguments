@@ -1,18 +1,13 @@
 ## [![npm][npmjs-img]][npmjs-url] [![standard style][standard-img]][standard-url] [![build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![deps status][daviddm-img]][daviddm-url]
 
-> Handles given Arguments object - return separatly last argument (commonly callback) and other arguments as Array. Useful in node-style callback flow. Used by [hybridify][hybridify]
+> Handles given Arguments object - return separatly last argument (commonly callback) and other arguments as Array. Useful in node-style callback flow.
+
 
 ## Install
-```bash
-npm install handle-arguments
+```
+npm install handle-arguments --save
 npm test
 ```
-
-### Please upgrade to v2.0.x
-> In `v1.0.3` was introduced **breaking** change. Sorry for the `v1.0.4` version...
-
-- if last argument isnt function, default `cb` is empty function.
-- and default fn `.toString().length` is 0 and is named `defaultHanleArgumentsCallback`
 
 
 ## API
@@ -20,11 +15,11 @@ npm test
 
 ### [handleArguments](./index.js#L40)
 
-- `<argsObject>` **{Arguments}** Arguments object  
-- `return` **{Object}** with properties `callback`, `cb` and `arguments` with `args` alias
-  + `callback` **{Function}** last argument if function, else empty function given
+- `<argsObject>` **{Arguments}** the arguments object  
+- `return` **{Object}**
+  + `callback` **{Function}** last argument if function or `undefined`
   + `cb` **{Function}** alias of `callback`
-  + `arguments` **{Array}** all arguments without last
+  + `arguments` **{Array}** all arguments without last (the callback)
   + `args` **{Array}** alias of `arguments`
 
 **Example:**
@@ -33,21 +28,20 @@ npm test
 var handleArguments = require('handle-arguments')
 
 function fixture() {
-  var argz = handleArguments(arguments)
-  return argz
+  return handleArguments(arguments)
 }
 
 console.log(fixture(1, 2, 3))
-//=> {callback: [Function: defaultHandleArgumentsCallback],
+//=> {callback: undefined, cb: undefined
 // arguments: [1, 2, 3], args: [1, 2, 3]}
-//
-// [Function: defaultHandleArgumentsCallback] is empty function (noop)
 
-console.log(fixture(1, 2, function cb() {}))
-//=> {callback: [Function: cb], arguments: [1, 2], args: [1, 2]}
+console.log(fixture(1, 2, function _callback_ () {}))
+//=> {callback: [Function: _callback_], cb: [Function: _callback_],
+// arguments: [1, 2], args: [1, 2]}
 ```
 
-#### instead of commonly used pattern
+**instead of commonly used pattern**
+
 ```js
 function fixture() {
   var args = [].slice.call(arguments)
@@ -62,19 +56,6 @@ function fixture() {
 }
 ```
 > Or more real world examples [callback-and-promise][callback-and-promise], [thenify][thenify], [thenify-all][thenify-all] and a lot more...
-
-
-
-## Related
-- [hybridables][hybridables]
-- [hybridify][hybridify]
-- [hybridify-all][hybridify-all]
-- [handle-callback][handle-callback]
-- [handle-errors][handle-errors]
-- [callback-and-promise][callback-and-promise]
-- [thenify-all][thenify-all]
-- [thenify][thenify]
-- [thenables][thenables]
 
 
 ## Author
