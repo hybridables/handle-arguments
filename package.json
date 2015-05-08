@@ -1,7 +1,7 @@
 {
   "name": "handle-arguments",
-  "version": "2.0.0",
-  "description": "Handles given Arguments object - return separatly last argument (commonly callback) and other arguments as Array. Useful in node-style callback flow. Used in `hybridify`",
+  "version": "3.0.0",
+  "description": "Handles given Arguments object - return separatly last argument (commonly callback) and other arguments as Array. Useful in node-style callback flow.",
   "scripts": {
     "test": "standard && node test.js",
     "travis": "standard && istanbul cover test.js --report lcovonly"

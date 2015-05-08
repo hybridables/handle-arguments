@@ -1,5 +1,13 @@
 
 
+## v3.0.0 / May 9, 2015
+- Release v3.0.0 / npm@v3.0.0
+- run update, rename files
+- breaking change: callback is `undefined`, if last arg is not a function
+- update readme
+- apply feross/standard
+- replace `mocha` with `assertit`
+
 ## v2.0.0 / January 28, 2015
 - Release v2.0.0 / npm@v2.0.0
 - because the "maybe-breakable" change in `v1.0.3`: _"if last arguments isnt function, default `cb` is empty function named `defaultHanleArgumentsCallback`"_
