@@ -58,6 +58,16 @@ function fixture() {
 > Or more real world examples [callback-and-promise][callback-and-promise], [thenify][thenify], [thenify-all][thenify-all] and a lot more...
 
 
+## Related
+- [async-exec-cmd](https://github.com/tunnckoCore/async-exec-cmd): Simple, fast, flexible and cross-platform async executing commands (with node-cross-spawn).
+- [cross-spawn](https://github.com/IndigoUnited/node-cross-spawn): Cross platform child_process#spawn
+- [exec-cmd](https://github.com/hybridables/exec-cmd): Flexible and cross-platform executing commands. Hybrid. Async and Promise API.
+- [hybridify](https://github.com/hybridables/hybridify): Building hybrid APIs. You can use both callback and promise in same time.  Like… [more](https://github.com/hybridables/hybridify)
+- [handle-callback](https://github.com/hybridables/handle-callback): Initial step for creating hybrid APIs, used by `hybridify`. Handle callback in promise - give… [more](https://github.com/hybridables/handle-callback)
+- [is-missing](https://github.com/tunnckoCore/is-missing): Check that given `name` or `user/repo` exists in npm registry or in github as user… [more](https://github.com/tunnckoCore/is-missing)
+- [npm-pkgs-filter](https://github.com/tunnckoCore/npm-pkgs-filter): Filter the list of user npm packages from the [npmjs.com](https://npmjs.com) using glob pattern, function, array… [more](https://github.com/tunnckoCore/npm-pkgs-filter)
+
+
 ## Author
 **Charlike Mike Reagent**
 + [gratipay/tunnckoCore][author-gratipay]
