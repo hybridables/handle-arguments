@@ -1,5 +1,9 @@
 
 
+## v3.0.1 / May 9, 2015
+- Release v3.0.1 / npm@v3.0.1
+- add related section
+
 ## v3.0.0 / May 9, 2015
 - Release v3.0.0 / npm@v3.0.0
 - run update, rename files
