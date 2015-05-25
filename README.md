@@ -60,13 +60,12 @@ function fixture() {
 
 
 ## See also
-- [async-exec-cmd](https://github.com/tunnckoCore/async-exec-cmd): Simple, fast, flexible and cross-platform async executing commands (with node-cross-spawn).
-- [cross-spawn](https://github.com/IndigoUnited/node-cross-spawn): Cross platform child_process#spawn
-- [exec-cmd](https://github.com/hybridables/exec-cmd): Flexible and cross-platform executing commands. Hybrid. Async and Promise API.
-- [hybridify](https://github.com/hybridables/hybridify): Building hybrid APIs. You can use both callback and promise in same time.  Like… [more](https://github.com/hybridables/hybridify)
+- [async-exec-cmd](https://github.com/tunnckoCore/async-exec-cmd#readme): Simple, fast, flexible and cross-platform async executing commands (with node-cross-spawn).
+- [bluebird](https://github.com/petkaantonov/bluebird): Full featured Promises/A+ implementation with exceptionally good performance
+- [hybridify](https://github.com/hybridables/hybridify#readme): Building hybrid APIs. You can use both callback and promise in same time.  Like… [more](https://github.com/hybridables/hybridify#readme)
 - [handle-callback](https://github.com/hybridables/handle-callback): Initial step for creating hybrid APIs, used by `hybridify`. Handle callback in promise - give… [more](https://github.com/hybridables/handle-callback)
-- [is-missing](https://github.com/tunnckoCore/is-missing): Check that given `name` or `user/repo` exists in npm registry or in github as user… [more](https://github.com/tunnckoCore/is-missing)
-- [npm-pkgs-filter](https://github.com/tunnckoCore/npm-pkgs-filter): Filter the list of user npm packages from the [npmjs.com](https://npmjs.com) using glob pattern, function, array… [more](https://github.com/tunnckoCore/npm-pkgs-filter)
+- [manage-arguments](https://github.com/tunnckocore/manage-arguments#readme): Prevents arguments leakage - managing arguments. From Optimization killers by Petka Antonov. Powers `handle-arguments`
+- [Optimization killers](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments) by [@petkaantonov](https://github.com/petkaantonov)
 
 
 ## Contributing
