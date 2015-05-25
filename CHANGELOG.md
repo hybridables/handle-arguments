@@ -1,5 +1,13 @@
 
 
+## 3.0.2 - 2015-05-25
+- Release v3.0.2 / npm@v3.0.2
+- add features section
+- update changelog
+- use `manage-arguments` to prevent arguments leakage
+- update `see also` section
+- update - readme style, travis, package.json etc struff
+
 ## 3.0.1 - 2015-05-09
 - Release v3.0.1 / npm@v3.0.1
 - add related section

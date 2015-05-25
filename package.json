@@ -1,6 +1,6 @@
 {
   "name": "handle-arguments",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Handles given Arguments object - return separatly last argument (commonly callback) and other arguments as Array. Useful in node-style callback flow.",
   "repository": "hybridables/handle-arguments",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
