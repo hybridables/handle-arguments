@@ -12,6 +12,11 @@ npm test
 ```
 
 
+## Features
+- prevents arguments leakage ([Optimization killers](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments) by [@petkaantonov](https://github.com/petkaantonov)), using [manage-arguments](https://github.com/tunnckoCore/manage-arguments)
+- support node lists in IE < 9 and ensure dense arrays are returned
+
+
 ## API
 > For more use-cases see the [tests](./test.js)
 
