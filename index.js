@@ -1,4 +1,4 @@
-/**
+/*!
  * handle-arguments <https://github.com/hybridables/handle-arguments>
  *
  * Copyright (c) 2015 Charlike Mike Reagent, contributors.
