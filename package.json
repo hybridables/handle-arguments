@@ -10,8 +10,8 @@
     "test": "standard && node test.js"
   },
   "dependencies": {
-    "array-slice": "^0.2.2",
-    "is-arguments": "^1.0.0"
+    "array-slice": "~0.2.3",
+    "manage-arguments": "~1.0.0"
   },
   "devDependencies": {
     "assertit": "^0.1.0"
