@@ -7,8 +7,8 @@
 
 'use strict'
 
-var slice = require('array-slice')
-var manageArguments = require('manage-arguments')
+var slice = require('sliced')
+var isArgs = require('is-arguments')
 
 /**
  * Commonly used handling of Arguments object
@@ -37,20 +37,19 @@ var manageArguments = require('manage-arguments')
  * @api public
  */
 module.exports = function handleArguments (argsObject) {
-  var args = manageArguments(argsObject)
-  var len = args.length
-  var last = args[len - 1]
-  var callback = null
-
-  if (typeof last === 'function') {
-    callback = last
-    args = slice(args, 0, -1)
+  if (!isArgs(argsObject)) {
+    throw new TypeError('handle-arguments expect only Arguments object')
   }
-  callback = callback === null ? undefined : callback
+
+  var args = slice(argsObject)
+  var last = args[args.length - 1]
+
+  last = typeof last === 'function' ? last : undefined
+  args = last ? slice(args, 0, -1) : args
 
   return {
-    callback: callback,
-    cb: callback,
+    callback: last,
+    cb: last,
     arguments: args,
     args: args
   }
