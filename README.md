@@ -1,6 +1,6 @@
-# handle-arguments [![npmjs.com][npmjs-img]][npmjs-url] [![The MIT License][license-img]][license-url]
+# [handle-arguments][author-www-url] [![npmjs.com][npmjs-img]][npmjs-url] [![The MIT License][license-img]][license-url] 
 
-> Handles given Arguments object - return separatly last argument (commonly callback) and other arguments as Array. Useful in node-style callback flow.
+> Handles given Arguments object - return separatly last argument (commonly callback) and other arguments as Array. Useful in node-style callback flow. Used by `hybridify`.
 
 [![code climate][codeclimate-img]][codeclimate-url] [![standard code style][standard-img]][standard-url] [![travis build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![dependency status][david-img]][david-url]
 
@@ -8,13 +8,12 @@
 ## Install
 ```
 npm i handle-arguments --save
-npm test
 ```
 
-
 ## Features
-- prevents arguments leakage ([Optimization killers](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments) by [@petkaantonov](https://github.com/petkaantonov)), using [manage-arguments](https://github.com/tunnckoCore/manage-arguments)
+- prevents arguments leakage ([Optimization killers](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments) by [@petkaantonov](https://github.com/petkaantonov))
 - support node lists in IE < 9 and ensure dense arrays are returned
+
 
 
 ## API
@@ -64,7 +63,7 @@ function fixture() {
 ```
 
 
-## See also
+## Related
 - [async-exec-cmd](https://github.com/tunnckoCore/async-exec-cmd#readme): Simple, fast, flexible and cross-platform async executing commands (with node-cross-spawn).
 - [bluebird](https://github.com/petkaantonov/bluebird): Full featured Promises/A+ implementation with exceptionally good performance
 - [hybridify](https://github.com/hybridables/hybridify#readme): Building hybrid APIs. You can use both callback and promise in same time.  Like… [more](https://github.com/hybridables/hybridify#readme)
@@ -74,8 +73,7 @@ function fixture() {
 
 
 ## Contributing
-
-Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/hybridables/handle-arguments/issues/new).
+Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/hybridables/handle-arguments/issues/new).  
 But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.
 
 
@@ -125,5 +123,5 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 [freenode-url]: http://webchat.freenode.net/?channels=charlike
 [freenode-img]: https://img.shields.io/badge/freenode-%23charlike-5654a4.svg
 
-[new-message-url]: https://github.com/tunnckoCore/messages
-[new-message-img]: https://img.shields.io/badge/send%20me-message-green.svg
+[new-message-url]: https://github.com/tunnckoCore/ama
+[new-message-img]: https://img.shields.io/badge/ask%20me-anything-green.svg
