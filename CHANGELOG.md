@@ -1,5 +1,9 @@
 
 
+## 3.0.4 - 2015-05-25
+- Release v3.0.4 / npm@v3.0.4
+- node@4 on travis
+
 ## 3.0.3 - 2015-05-25
 - Release v3.0.3 / npm@v3.0.3
 - update docs
