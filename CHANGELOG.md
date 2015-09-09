@@ -1,5 +1,15 @@
 
 
+## 3.0.3 - 2015-05-25
+- Release v3.0.3 / npm@v3.0.3
+- update docs
+- update
+- simplify
+  + switch to use `sliced`
+  + it is little bit faster than `array-slice`
+  + remove `manage-arguments`
+  + simplify logic
+
 ## 3.0.2 - 2015-05-25
 - Release v3.0.2 / npm@v3.0.2
 - add features section
