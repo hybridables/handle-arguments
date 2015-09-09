@@ -1,6 +1,6 @@
 # [handle-arguments][author-www-url] [![npmjs.com][npmjs-img]][npmjs-url] [![The MIT License][license-img]][license-url] 
 
-> Handles given Arguments object - return separatly last argument (commonly callback) and other arguments as Array. Useful in node-style callback flow. Used by `hybridify`.
+> Handles given Arguments object - return separatly last argument (commonly callback) and other arguments as Array. Useful in node-style callback flow. Used by [hybridify](https://github.com/hybridables/hybridify)
 
 [![code climate][codeclimate-img]][codeclimate-url] [![standard code style][standard-img]][standard-url] [![travis build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![dependency status][david-img]][david-url]
 
@@ -33,7 +33,7 @@ npm i handle-arguments --save
 ```js
 var handleArguments = require('handle-arguments')
 
-function fixture() {
+function fixture () {
   return handleArguments(arguments)
 }
 
@@ -49,14 +49,14 @@ console.log(fixture(1, 2, function _callback_ () {}))
 **instead of commonly used pattern**
 
 ```js
-function fixture() {
+function fixture () {
   var args = [].slice.call(arguments)
   var len = args.length
   var callback = args[len - 1]
 
   if (typeof callback === 'function') {
     args = args.slice(0, -1)
-    callback.apply(undefined, [null].concat(args))
+    callback.apply(null, [null].concat(args))
   }
   return args
 }
@@ -64,11 +64,11 @@ function fixture() {
 
 
 ## Related
-- [async-exec-cmd](https://github.com/tunnckoCore/async-exec-cmd#readme): Simple, fast, flexible and cross-platform async executing commands (with node-cross-spawn).
+- [async-exec-cmd](https://github.com/tunnckoCore/async-exec-cmd): Simple, fast, flexible and cross-platform async executing commands (with node-cross-spawn).
 - [bluebird](https://github.com/petkaantonov/bluebird): Full featured Promises/A+ implementation with exceptionally good performance
-- [hybridify](https://github.com/hybridables/hybridify#readme): Building hybrid APIs. You can use both callback and promise in same time.  Like… [more](https://github.com/hybridables/hybridify#readme)
+- [hybridify](https://github.com/hybridables/hybridify): Building hybrid APIs. You can use both callback and promise in same time.  Like… [more](https://github.com/hybridables/hybridify)
 - [handle-callback](https://github.com/hybridables/handle-callback): Initial step for creating hybrid APIs, used by `hybridify`. Handle callback in promise - give… [more](https://github.com/hybridables/handle-callback)
-- [manage-arguments](https://github.com/tunnckocore/manage-arguments#readme): Prevents arguments leakage - managing arguments. From Optimization killers by Petka Antonov. Powers `handle-arguments`
+- [manage-arguments](https://github.com/tunnckocore/manage-arguments): Prevents arguments leakage - managing arguments. From Optimization killers by Petka Antonov. Powers `handle-arguments`
 - [Optimization killers](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments) by [@petkaantonov](https://github.com/petkaantonov)
 
 

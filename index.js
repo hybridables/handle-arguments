@@ -18,7 +18,7 @@ var isArgs = require('is-arguments')
  * ```js
  * var handleArguments = require('handle-arguments')
  *
- * function fixture() {
+ * function fixture () {
  *   return handleArguments(arguments)
  * }
  *
