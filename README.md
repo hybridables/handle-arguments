@@ -1,6 +1,6 @@
 # [handle-arguments][author-www-url] [![npmjs.com][npmjs-img]][npmjs-url] [![The MIT License][license-img]][license-url] 
 
-> Handles passed Arguments object. Gets separately arguments in `.args` and last argument (callback) in `.callback`. Useful for node-style callback flow.
+> Get separately non-callback arguments in `.arguments` and the last argument if it [is-callback-function][] in `.callback`. It also works like [sliced][], but returns object with `.arguments` and `.callback` properties.
 
 [![code climate][codeclimate-img]][codeclimate-url] [![standard code style][standard-img]][standard-url] [![travis build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![dependency status][david-img]][david-url]
 
