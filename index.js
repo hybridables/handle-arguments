@@ -9,6 +9,18 @@
 
 var utils = require('./utils')
 
+/**
+ * > Get separately non-callback arguments in `.arguments`, and
+ * the last function if it [is-callback-function][] in `.callback`.
+ * Signature is like [sliced][], it works almost the same way, but returns object
+ * with `.arguments` and `.callback` properties.
+ *
+ * @param  {Array|Arguments} `argz` Arguments object or array to eat.
+ * @param  {Array|Number} `names` If array directly passed to [is-callback-function][], otherwise to [sliced][]
+ * @param  {Number} `index` Passed directly to [sliced][] if `number`.
+ * @return {Object}
+ * @api public
+ */
 module.exports = function handleArguments (argz, names, index) {
   argz = utils.arrayify(argz)
 

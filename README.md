@@ -16,6 +16,20 @@ npm i handle-arguments --save
 const handleArguments = require('handle-arguments')
 ```
 
+### [handleArguments](index.js#L25)
+
+> Get separately non-callback arguments in `.arguments`, and
+the last function if it [is-callback-function][] in `.callback`.
+Signature is like [sliced][], it works almost the same way, but returns object
+with `.arguments` and `.callback` properties.
+
+**Params**
+
+* `argz` **{Array|Arguments}**: Arguments object or array to eat.    
+* `names` **{Array|Number}**: If array directly passed to [is-callback-function][], otherwise to [sliced][]    
+* `index` **{Number}**: Passed directly to [sliced][] if `number`.    
+* `returns` **{Object}**  
+
 ### Instead of commonly used and wrong pattern
 > It is part of "Optiomization Killers" and needed very much, so we need correct pattern to reuse.
  
