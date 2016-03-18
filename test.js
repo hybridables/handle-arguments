@@ -79,6 +79,18 @@ test('should be able to pass array instead of Arguments object', function (done)
   done()
 })
 
+test('should be able to pass as second argument custom `names` to be treated as `callback`', function (done) {
+  function fixture () {
+    return handle(arguments, ['qux', 'named', 'foo'])
+  }
+  /* istanbul ignore next */
+  function qux () {}
+  var actual = fixture(1, 2, qux)
+  test.strictEqual(typeof actual.callback === 'function', true)
+  test.strictEqual(actual.callback, qux)
+  done()
+})
+
 // test('handle-arguments', function () {
 //   test('should throw error', function () {
 //     // test('when Object is given - handleArguments({name: 123})', function (done) {

@@ -9,18 +9,18 @@
 
 var utils = require('./utils')
 
-module.exports = function handleArguments (argz, ignores, index) {
+module.exports = function handleArguments (argz, names, index) {
   argz = utils.arrayify(argz)
-  if (utils.isNumber(ignores)) {
-    index = ignores
-    ignores = false
+  if (utils.isNumber(names)) {
+    index = names
+    names = false
   }
 
   var args = utils.slice(argz, index)
   var last = args[args.length - 1]
 
   last = typeof last === 'function' ? last : function noop () {}
-  last = utils.isCallback(last) ? last : false
+  last = utils.isCallback(last, names) ? last : false
   args = last ? utils.slice(args, 0, -1) : args
 
   return {
