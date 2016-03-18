@@ -30,10 +30,30 @@
     "handle-arguments"
   ],
   "verb": {
+    "run": true,
     "toc": false,
     "layout": "empty",
     "tasks": [
       "readme"
-    ]
+    ],
+    "related": {
+      "list": [
+        "get-fn-name",
+        "function-arguments",
+        "is-callback-function",
+        "is-async-function",
+        "parse-function",
+        "arr-includes",
+        "common-callback-names"
+      ]
+    },
+    "reflinks": [
+      "is-callback-function",
+      "sliced",
+      "in-array"
+    ],
+    "lint": {
+      "reflinks": true
+    }
   }
 }
