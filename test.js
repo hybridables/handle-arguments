@@ -91,6 +91,30 @@ test('should be able to pass as second argument custom `names` to be treated as 
   done()
 })
 
+test('should allow pass `index` to `sliced` lib to get only arguments after `index`', function (done) {
+  function fixture () {
+    return handle(arguments, 2)
+  }
+  /* istanbul ignore next */
+  function callback () {}
+  var actual = fixture(1, 2, 3, 4, 5, callback)
+  test.strictEqual(typeof actual.callback === 'function', true)
+  test.strictEqual(actual.callback, callback)
+  test.deepEqual(actual.arguments, [3, 4, 5])
+  done()
+})
+
+test('should be able to pass two indicies to `sliced`', function (done) {
+  function fixture () {
+    return handle(arguments, 2, -1)
+  }
+  var actual = fixture(1, 2, 3, 4, 5)
+  test.strictEqual(actual.callback, false)
+  test.strictEqual(typeof actual.callback === 'boolean', true)
+  test.deepEqual(actual.arguments, [3, 4])
+  done()
+})
+
 // test('handle-arguments', function () {
 //   test('should throw error', function () {
 //     // test('when Object is given - handleArguments({name: 123})', function (done) {

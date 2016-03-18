@@ -11,14 +11,21 @@ var utils = require('./utils')
 
 module.exports = function handleArguments (argz, names, index) {
   argz = utils.arrayify(argz)
-  if (utils.isNumber(names)) {
-    index = names
+
+  var args = null
+  var nameNum = utils.isNumber(names)
+  var idxNum = utils.isNumber(index)
+
+  if (nameNum && !idxNum) {
+    args = utils.slice(argz, names)
     names = false
+  } else if (nameNum && idxNum) {
+    args = utils.slice(argz, names, index)
+  } else {
+    args = utils.slice(argz)
   }
 
-  var args = utils.slice(argz, index)
   var last = args[args.length - 1]
-
   last = typeof last === 'function' ? last : function noop () {}
   last = utils.isCallback(last, names) ? last : false
   args = last ? utils.slice(args, 0, -1) : args
