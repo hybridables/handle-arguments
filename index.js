@@ -15,12 +15,43 @@ var utils = require('./utils')
  * Signature is like [sliced][], it works almost the same way, but returns object
  * with `.arguments` and `.callback` properties.
  *
+ * **Example**
+ *
+ * ```js
+ * var handle = require('handle-arguments')
+ *
+ * function fixture () {
+ *   return handle(arguments)
+ * }
+ *
+ * function cb () {}
+ * function noop () {}
+ *
+ * console.log(fixture(1, 2, 3, 4).arguments) // => [1, 2, 3, 4]
+ * console.log(fixture(1, 2, 3, 4).callback) // => false
+ *
+ * console.log(fixture(1, 2, cb).arguments) // => [1, 2]
+ * console.log(fixture(1, 2, cb).callback) // => [Function: cb]
+ *
+ * console.log(fixture(1, 2, noop).arguments) // => [1, 2, noop]
+ * console.log(fixture(1, 2, noop).callback) // => false
+ *
+ * // treat functions named `noop` or `foo` as callback
+ * function fn () {
+ *   return handle(arguments, ['foo', 'noop'])
+ * }
+ *
+ * console.log(fn(1, 2, 3, noop).arguments) // => [1, 2, 3]
+ * console.log(fn(1, 2, 3, noop).callback) // => [Function: noop]
+ * ```
+ *
  * @param  {Array|Arguments} `argz` Arguments object or array to eat.
  * @param  {Array|Number} `names` If array directly passed to [is-callback-function][], otherwise to [sliced][].
  * @param  {Number} `index` Passed directly to [sliced][] if `number`.
  * @return {Object}
  * @api public
  */
+
 module.exports = function handleArguments (argz, names, index) {
   argz = utils.arrayify(argz)
 

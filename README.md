@@ -16,12 +16,8 @@ npm i handle-arguments --save
 const handleArguments = require('handle-arguments')
 ```
 
-### [handleArguments](index.js#L25)
-
-> Get separately non-callback arguments in `.arguments`, and
-the last function if it [is-callback-function][] in `.callback`.
-Signature is like [sliced][], it works almost the same way, but returns object
-with `.arguments` and `.callback` properties.
+### [handleArguments](index.js#L55)
+> Get separately non-callback arguments in `.arguments`, and the last function if it [is-callback-function][] in `.callback`. Signature is like [sliced][], it works almost the same way, but returns object with `.arguments` and `.callback` properties.
 
 **Params**
 
@@ -29,6 +25,36 @@ with `.arguments` and `.callback` properties.
 * `names` **{Array|Number}**: If array directly passed to [is-callback-function][], otherwise to [sliced][].    
 * `index` **{Number}**: Passed directly to [sliced][] if `number`.    
 * `returns` **{Object}**  
+
+**Example**
+
+```js
+var handle = require('handle-arguments')
+
+function fixture () {
+  return handle(arguments)
+}
+
+function cb () {}
+function noop () {}
+
+console.log(fixture(1, 2, 3, 4).arguments) // => [1, 2, 3, 4]
+console.log(fixture(1, 2, 3, 4).callback) // => false
+
+console.log(fixture(1, 2, cb).arguments) // => [1, 2]
+console.log(fixture(1, 2, cb).callback) // => [Function: cb]
+
+console.log(fixture(1, 2, noop).arguments) // => [1, 2, noop]
+console.log(fixture(1, 2, noop).callback) // => false
+
+// treat functions named `noop` or `foo` as callback
+function fn () {
+  return handle(arguments, ['foo', 'noop'])
+}
+
+console.log(fn(1, 2, 3, noop).arguments) // => [1, 2, 3]
+console.log(fn(1, 2, 3, noop).callback) // => [Function: noop]
+```
 
 ### Instead of commonly used and wrong pattern
 > It is part of "Optiomization Killers" and needed very much, so we need correct pattern to reuse.
