@@ -1,5 +1,21 @@
 
 
+
+## 3.1.0 - 2016-05-04
+- Release v3.1.0 / npm@v3.1.0
+- update badges
+- bump deps
+- update docs example
+- update description
+- run verb
+- start docs
+- update tests
+- follow `sliced` lib signature
+- allow passing custom names to `is-callback-function` lib
+- update tests
+- start tests
+- update and refactor
+
 ## 3.0.4 - 2015-05-25
 - Release v3.0.4 / npm@v3.0.4
 - node@4 on travis
