@@ -1,4 +1,4 @@
-# [handle-arguments][author-www-url] [![npmjs.com][npmjs-img]][npmjs-url] [![The MIT License][license-img]][license-url] 
+# [handle-arguments][author-www-url] [![npmjs.com][npmjs-img]][npmjs-url] [![The MIT License][license-img]][license-url] [![npm downloads][downloads-img]][downloads-url] 
 
 > Get separately non-callback arguments in `.arguments` and the last argument if it [is-callback-function][] in `.callback`. It also works like [sliced][], but returns object with `.arguments` and `.callback` properties.
 
@@ -90,15 +90,18 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 
 [![tunnckoCore.tk][author-www-img]][author-www-url] [![keybase tunnckoCore][keybase-img]][keybase-url] [![tunnckoCore npm][author-npm-img]][author-npm-url] [![tunnckoCore twitter][author-twitter-img]][author-twitter-url] [![tunnckoCore github][author-github-img]][author-github-url]
 
+[in-array]: https://github.com/jonschlinkert/in-array
 [is-callback-function]: https://github.com/tunnckocore/is-callback-function
 [sliced]: https://github.com/aheckmann/sliced
-[in-array]: https://github.com/jonschlinkert/in-array
 
 [npmjs-url]: https://www.npmjs.com/package/handle-arguments
 [npmjs-img]: https://img.shields.io/npm/v/handle-arguments.svg?label=handle-arguments
 
 [license-url]: https://github.com/hybridables/handle-arguments/blob/master/LICENSE
-[license-img]: https://img.shields.io/badge/license-MIT-blue.svg
+[license-img]: https://img.shields.io/npm/l/handle-arguments.svg
+
+[downloads-url]: https://www.npmjs.com/package/handle-arguments
+[downloads-img]: https://img.shields.io/npm/dm/handle-arguments.svg
 
 [codeclimate-url]: https://codeclimate.com/github/hybridables/handle-arguments
 [codeclimate-img]: https://img.shields.io/codeclimate/github/hybridables/handle-arguments.svg
@@ -135,4 +138,3 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 
 [new-message-url]: https://github.com/tunnckoCore/ama
 [new-message-img]: https://img.shields.io/badge/ask%20me-anything-green.svg
-
