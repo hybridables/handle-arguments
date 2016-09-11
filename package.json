@@ -13,7 +13,7 @@
   "dependencies": {
     "is-arguments": "^1.0.2",
     "is-callback-function": "^1.0.0",
-    "is-number": "^2.1.0",
+    "is-number": "^3.0.0",
     "isarray": "^1.0.0",
     "lazy-cache": "^2.0.1",
     "sliced": "^1.0.1"
